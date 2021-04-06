@@ -11,9 +11,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <style>
+    li{
+        list-style: none;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
     body{
         user-select: none;
         overflow-x: hidden;
+        font-family: 'Montserrat', sans-serif;
     }
     body::-webkit-scrollbar {
         width: 6px;
@@ -25,10 +32,10 @@
     a{
         text-decoration: none;
         color: black;
-        border-bottom: 2px solid transparent;
+        border-bottom: 3px solid transparent;
     }
-    a:hover{
-        border-bottom: 2px solid #d493ff;
+    #headerNav a:hover{
+        border-bottom: 3px solid #5c3c92;
     }
     #header{
         display: flex;
@@ -60,6 +67,9 @@
         margin: 2% 5%;
         border-radius: 50px;
     }
+    #headerNav{
+        position: sticky;
+    }
     #headerNav ul{
         list-style: none;
         font-family: 'Roboto', sans-serif;
@@ -74,16 +84,134 @@
     #headerNav li{
         margin: 0% 2%;
     }
+    #contact #footerCopyright{
+        display: flex;
+        justify-content: center;
+        color: gray;
+    }
+    .buttonStyle{
+        font-family: 'Montserrat', sans-serif;
+        background-color: #d493ff;
+        padding: 1%;
+        color: white;
+        border-radius: 25px;
+    }
+    .sectionHeader{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 250%;
+        margin: 5% auto 0% auto;
+        border-bottom: 3px solid #5c3c92;
+    }
+    #contact #footerBody{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0% 15% 2% 15%; 
+    }
+    #about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 12% 0% 12%;
+        text-align: center;
+    }
+    #contact #footerBody #contactBody{
+        padding: 0 2%;
+        text-align: center;
+    }
+    #contact #footerCopyright{
+        font-family: 'Montserrat', sans-serif;
+    }
+    .section2Header{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 150%;
+        margin: 2% auto 0% auto;
+    }
+    #timeline{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #timeline #sessions{
+        border-radius: 12px;
+        position: relative;
+    }
+    #timeline li{
+        border-left: 1px solid #abaaed;
+        position: relative;
+        padding-left: 20px;
+        margin-left: 10px;
+        padding-bottom: 5px;
+    }
+    #timeline li:before{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: white;
+        border: 1px solid #d493ff;
+        box-shadow: 3px 3px 0px #d493ff;
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: 0px;
+    }
+    .courseClass{
+        background-color: #FF8BDB;
+        color: white;
+        padding: 1%;
+    }
+    .workClass{
+        background-color: #007062;
+        color: white;
+        padding: 1%;
+    }
+    .workshopClass{
+        background-color: #FFB183;
+        color: white;
+        padding: 1%;
+    }
+    .hackathonClass{
+        background-color: #5c3c92;
+        color: white;
+        padding: 1%;
+    }
+    #headerLogo{
+        display: block;
+    }
+    #project{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+    }
+    #skillsBody p{
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    #skillsBody p span{
+        margin: 2%;
+    }
+    @media only screen and (max-width: 600px) {
+        #headerLogo{
+            display: none;
+        }
+        #headerNav ul{
+            margin: 3%;
+        }
+    }
 </style>
 <body>
     <div id="headerNav">
         <ul id="list">
             <li><a href="">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#project">PROJECT</a></li>
             <li><div id="headerLogo">
                 <image src="./assets/favicon.png" />
             </div></li>
-            <li><a href="#work">WORK</a></li>
+            <li><a href="#about">ABOUT</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
     </div>
@@ -94,26 +222,63 @@
             <p id="TitleBody"><span style="color: white; font-size: 150%;">“</span>A creative and detailed individual with ability to develop effective and efficient solution with zero tolerance for errors. Looking to join a progressive tech company where my technical skills will be fully harnessed.<span style="color: white;font-size: 150%;">”</span></p>
         </div>
     </div>
-    <div id="work">
+    <div id="project">
+        <p class="sectionHeader">PROJECT</p>
         <div id="centerProject">
             
         </div>
         <div id="centerExtraProject">
 
         </div>
-        <div id="centerExperience">
-            
-        </div>
     </div>
     <div id="about">
-
+        <p class="sectionHeader">ABOUT</p>
+        <p class="section2Header">Skills</p>
+        <div id="skillsBody">
+            <p><span><img src="./assets/js.png"></span> <span><img src="./assets/rjs.png"></span> <span><img src="./assets/node.png"></span> <span><img src="./assets/mon.png"></span> <span><img src="./assets/rn.png"></span> <span><img src="./assets/fire.png"></span> <span><img src="./assets/aws.png"></span></p>
+        </div>
+        <p class="section2Header">Background</p>
+        <p>I began my developer journey in first year of graduation  and have since worked on a number of solo and collaborative projects.I have completed three full stack web app and one hybrid app.Also done few of small project like static website, ML model, UI design and other system in java and python. I take pride in the work that I do and completing all my work before time. I am a firm believer in working hard, working together, and having fun along the way! Explore my portfolio, and feel free to get in touch with any questions.</p>
+        <p class="section2Header">Extras</p>
+        <p><span style="border-bottom:2px solid #FF8BDB;">Course</span> · <span style="border-bottom:2px solid #007062;">Work</span> · <span style="border-bottom:2px solid #FFB183;">Workshop</span> · <span style="border-bottom:2px solid #5c3c92;">Hackathon</span></p>
     </div>
+    <div id="timeline">
+        <ul id="sessions">
+            <li>
+              <p class="time">2018</p>
+              <p class="courseClass">C++ & Java Programming (Udemy)</p>
+            </li>
+            <li>
+                <p class="time">2019</p>
+                <p class="workshopClass">Cloud Practitioner Academy (AWS)</p>
+                <p class="courseClass">Web Development (Udemy)</p>
+            </li>
+            <li>
+                <p class="time">2020 🔥</p>
+                <p class="workshopClass">Machine Learning Workshop (IIT - Mumbai)</p>
+                <p class="workClass">Project Maintainer (Club Gamma)</p>
+                <p class="hackathonClass">Hack the Mountains (Sudans Tech)</p>
+                <p class="workClass">Inhouse Internship (CHARUSAT)</p>
+                <p class="hackathonClass">Web Hackathon (Progate)</p>
+                <p class="courseClass">Google Technical Support Fundamentals (Coursera)</p>
+                <p class="courseClass">Machine Learning (Udemy)</p>
+            </li>
+            <li>
+                <p class="time">2021</p>
+                <p class="hackathonClass">Hack Gujarat (Microsoft Learn Student Ambassadors)</p>
+                <p class="courseClass">MERN Development (Udemy)</p>
+                <p class="courseClass">React Native Development (Udemy)</p>
+            </li>
+        </ul>
+    </div> 
     <div id="contact">
         <div id="footerBody">
-
+            <p class="sectionHeader">CONTACT</p>
+            <p id="contactBody">Interested in learning more about me, my work or how we can collaborate on an upcoming project? Feel free to reach out anytime, I would be more than happy to chat.</p>
+            <p class="buttonStyle"><a href="mailto:joshiabhishek932000.com">Say Hello 👋</a></p>
         </div>
         <div id="footerCopyright">
-
+            <p>©2021 by Abhishek Joshi</p>
         </div>
     </div>
     <script>
