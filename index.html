@@ -283,14 +283,17 @@
         font-size: 150%;
     }
     @media only screen and (max-width: 600px) {
+        #headerNav ul{
+            font-size: 80%;
+        }
         #headerLogo{
             display: none;
         }
-        #headerNav ul{
-            margin: 3%;
+        #headerNav li{
+            margin: 2% 1%;
         }
         #skillsBody p span{
-            margin: 0 2%;
+            margin: 0 1%;
         }
         .featuredProjectcontainer{
             flex-direction: column;
@@ -299,6 +302,21 @@
             width: 50vw;
         }
         .featuredProjectcontainer:nth-child(2) .fpImage{
+            width: 50vw;
+        }
+        .featuredProjectcontainer #id1{
+            text-align: center;
+        }
+        .featuredProjectcontainer #id2{
+            text-align: center;
+        }
+        .featuredProjectcontainer #id3{
+            text-align: center;
+        }
+        .featuredProjectcontainer #id4{
+            text-align: center;
+        }
+        .featuredProjectcontainer .fpImage img{
             width: 50vw;
         }
     }
