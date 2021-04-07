@@ -67,8 +67,8 @@
         margin: 2% 5%;
         border-radius: 50px;
     }
-    #headerNav{
-        position: sticky;
+    .sticky + #header{
+        padding-top: 60px;
     }
     #headerNav ul{
         list-style: none;
@@ -192,7 +192,95 @@
         justify-content: center;
     }
     #skillsBody p span{
-        margin: 2%;
+        margin: 0 5%;
+        cursor: pointer;
+    }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #d493ff;
+        color: white;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        right: -75%;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    .the-blur{
+        position: fixed;
+        top:0;
+        width: 100%;
+        min-height: 50px;
+        margin-bottom: 20px;
+        background: rgba(0,0,0,.4);
+        z-index:1010;
+        filter: blur(20px);
+    }
+    #socialHandle{
+        margin: -1% auto 1%;
+    }
+    .featuredProjectcontainer{
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        margin: 2% 15%;
+        margin-bottom: 0;
+    }
+    .featuredProjectcontainer .fpImage img{
+        width: 40vw;
+        border-radius: 20px;
+    }
+    .featuredProjectcontainer .fpImage{
+        width: 30vw;
+    }
+    .featuredProjectcontainer:nth-child(2) .fpImage{
+        width: 25vw;
+    }
+    .featuredProjectcontainer .fpBodyInner{
+        border-radius: 15px;
+        padding: 1% 5%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        color: #fff;
+    }
+    .featuredProjectcontainer #id1{
+        background-color: #5c3c92;
+        text-align: start;
+    }
+    .featuredProjectcontainer #id2{
+        background-color: #007062;
+        text-align: start;
+    }
+    .featuredProjectcontainer #id3{
+        background-color: #FFB183;
+        text-align: start;
+    }
+    .featuredProjectcontainer #id4{
+        background-color: #FF8BDB;
+        text-align: start;
+    }
+    .featuredProjectcontainer .fpBodyInner .fpbTech span{
+        margin: 0 1%;
+    }
+    .featuredProjectcontainer .fpBodyOutter{
+        text-align: end;
+    }
+    .featuredProjectcontainer .fpBodyOutter span{
+        margin: 0 1%;
+    }
+    .featuredProjectcontainer .fpbTitle p{
+        font-family: 'Calligraffitti', cursive;
+        font-size: 500%;
+        font-size: 150%;
     }
     @media only screen and (max-width: 600px) {
         #headerLogo{
@@ -200,6 +288,18 @@
         }
         #headerNav ul{
             margin: 3%;
+        }
+        #skillsBody p span{
+            margin: 0 2%;
+        }
+        .featuredProjectcontainer{
+            flex-direction: column;
+        }
+        .featuredProjectcontainer .fpImage{
+            width: 50vw;
+        }
+        .featuredProjectcontainer:nth-child(2) .fpImage{
+            width: 50vw;
         }
     }
 </style>
@@ -225,17 +325,127 @@
     <div id="project">
         <p class="sectionHeader">PROJECT</p>
         <div id="centerProject">
-            
-        </div>
-        <div id="centerExtraProject">
-
+            <div class="featuredProjectcontainer">
+                <div class="fpImage">
+                    <img src="./assets/HappyHome.png">
+                </div>
+                <div class="fpBody">
+                    <div class="fpbTitle">
+                        <p>Happy Home (Web App)</p>
+                    </div>
+                    <div class="fpBodyInner" id="id1">
+                        <div class="fpbBody">
+                            <p>Happy Home is a home rental management system website where every user is authorized with passportjs. Every user can post there listing for sold or lease there home upto few number for unlimited listing they have buy vip account. Also vip user have more priority then common users listing in standing. Users can chat with each users and final the deal.</p>
+                        </div>
+                        <div class="fpbTech">
+                            <p><span><img src="./assets/js.png"></span><span><img src="./assets/node.png"></span><span><img src="./assets/mon.png"></span></p>
+                        </div>
+                    </div>
+                    <div class="fpBodyOutter">
+                        <div>
+                            <p><span><a href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_website-nodejs-mongodb-activity-6666888574996238336-EloF"><img src="./assets/linkedin.png"></a></span><span><a href="http://happyhomewebapp.herokuapp.com/"><img src="./assets/link.png"></a></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featuredProjectcontainer">
+                <div class="fpImage">
+                    <img src="./assets/Attendy.png">
+                </div>
+                <div class="fpBody">
+                    <div class="fpbTitle">
+                        <p>Attendy (Hybrid App)</p>
+                    </div>
+                    <div class="fpBodyInner" id="id2">
+                        <div class="fpbBody">
+                            <p>Happy Home is a home rental management system website where every user is authorized with passportjs. Every user can post there listing for sold or lease there home upto few number for unlimited listing they have buy vip account. Also vip user have more priority then common users listing in standing. Users can chat with each users and final the deal.</p>
+                        </div>
+                        <div class="fpbTech">
+                            <p><span><img src="./assets/js.png"></span><span><img src="./assets/rn.png"></span><span><img src="./assets/fire.png"></span></p>
+                        </div>
+                    </div>
+                    <div class="fpBodyOutter">
+                        <div>
+                            <p><span><a href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_reactnative-firebase-javascriptdeveloper-activity-6782490672877371392-Kj7J"><img src="./assets/linkedin.png"></a></span><span><a href="https://expo.io/artifacts/fd3ee327-67b8-40ca-b23d-aa714f00bb81"><img src="./assets/link.png"></a></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featuredProjectcontainer">
+                <div class="fpImage">
+                    <img src="./assets/ProShop.png">
+                </div>
+                <div class="fpBody">
+                    <div class="fpbTitle">
+                        <p>ProShop (Web App)</p>
+                    </div>
+                    <div class="fpBodyInner" id="id3">
+                        <div class="fpbBody">
+                            <p>Happy Home is a home rental management system website where every user is authorized with passportjs. Every user can post there listing for sold or lease there home upto few number for unlimited listing they have buy vip account. Also vip user have more priority then common users listing in standing. Users can chat with each users and final the deal.</p>
+                        </div>
+                        <div class="fpbTech">
+                            <p><span><img src="./assets/js.png"></span><span><img src="./assets/rjs.png"></span><span><img src="./assets/node.png"></span><span><img src="./assets/mon.png"></span></p>
+                        </div>
+                    </div>
+                    <div class="fpBodyOutter">
+                        <div>
+                            <p><span><a href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_mernstack-reactjs-nodejs-activity-6754992629601091584-PHDa"><img src="./assets/linkedin.png"></a></span><span><a href="http://eproshopwebapp.herokuapp.com/"><img src="./assets/link.png"></a></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featuredProjectcontainer">
+                <div class="fpImage">
+                    <img src="./assets/socially.png">
+                </div>
+                <div class="fpBody">
+                    <div class="fpbTitle">
+                        <p>Socially (Web App)</p>
+                    </div>
+                    <div class="fpBodyInner" id="id4">
+                        <div class="fpbBody">
+                            <p>Socially is a social media website which include authentication by google followed by profile builder. Then make friends by sending request and accepting then. Also users can post on socially and other users can like or comment on that post.</p>
+                        </div>
+                        <div class="fpbTech">
+                            <p><span><img src="./assets/js.png"></span><span><img src="./assets/node.png"></span><span><img src="./assets/mon.png"></span></p>
+                        </div>
+                    </div>
+                    <div class="fpBodyOutter">
+                        <div>
+                            <p><span><a href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_expressjs-mongoose-ejs-activity-6682632477414080512-yoM_"><img src="./assets/linkedin.png"></a></span><span><a href="http://sociallywebapp.herokuapp.com/"><img src="./assets/link.png"></a></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="about">
         <p class="sectionHeader">ABOUT</p>
         <p class="section2Header">Skills</p>
         <div id="skillsBody">
-            <p><span><img src="./assets/js.png"></span> <span><img src="./assets/rjs.png"></span> <span><img src="./assets/node.png"></span> <span><img src="./assets/mon.png"></span> <span><img src="./assets/rn.png"></span> <span><img src="./assets/fire.png"></span> <span><img src="./assets/aws.png"></span></p>
+            <p>
+                <span class="tooltip">
+                    <img src="./assets/js.png"><span class="tooltiptext">JavaScript</span>
+                </span>
+                <span class="tooltip">
+                    <img src="./assets/rjs.png"><span class="tooltiptext">ReactJs</span>
+                </span>
+                <span class="tooltip">
+                    <img src="./assets/node.png"><span class="tooltiptext">NodeJs</span>
+                </span>
+                <span class="tooltip">
+                    <img src="./assets/mon.png"><span class="tooltiptext">MongoDB</span>
+                </span>
+                <span class="tooltip">
+                    <img src="./assets/rn.png"><span class="tooltiptext">ReactNative</span>
+                </span>
+                <span class="tooltip">
+                    <img src="./assets/fire.png"><span class="tooltiptext">Firebase</span>
+                </span>
+                <span class="tooltip">
+                    <img src="./assets/aws.png"><span class="tooltiptext">AWS</span>
+                </span>
+            </p>
         </div>
         <p class="section2Header">Background</p>
         <p>I began my developer journey in first year of graduation  and have since worked on a number of solo and collaborative projects.I have completed three full stack web app and one hybrid app.Also done few of small project like static website, ML model, UI design and other system in java and python. I take pride in the work that I do and completing all my work before time. I am a firm believer in working hard, working together, and having fun along the way! Explore my portfolio, and feel free to get in touch with any questions.</p>
@@ -275,14 +485,12 @@
         <div id="footerBody">
             <p class="sectionHeader">CONTACT</p>
             <p id="contactBody">Interested in learning more about me, my work or how we can collaborate on an upcoming project? Feel free to reach out anytime, I would be more than happy to chat.</p>
+            <p id="socialHandle"><span><a href="https://www.instagram.com/abhishek.__.93/"><img src="./assets/instagram.png"></a></span><span><a href="https://github.com/AbhishekJoshi93"><img src="./assets/github.png"></a></span><span><a href="https://www.linkedin.com/in/abhishek-joshi-132a5a182/"><img src="./assets/linkedin.png"></a></span></p>
             <p class="buttonStyle"><a href="mailto:joshiabhishek932000.com">Say Hello 👋</a></p>
         </div>
         <div id="footerCopyright">
             <p>©2021 by Abhishek Joshi</p>
         </div>
     </div>
-    <script>
-        
-    </script>
 </body>
 </html>
