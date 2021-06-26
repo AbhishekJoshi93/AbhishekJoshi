@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,38 +8,47 @@
     <title>Abhishek Joshi</title>
     <link rel="icon" href="./assets/favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Montserrat&family=Roboto&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <style>
-    li{
+    li {
         list-style: none;
     }
+
     html {
         scroll-behavior: smooth;
         overflow-x: hidden;
     }
-    body{
+
+    body {
         user-select: none;
         overflow-x: hidden;
         font-family: 'Montserrat', sans-serif;
     }
+
     body::-webkit-scrollbar {
         width: 6px;
     }
+
     body::-webkit-scrollbar-thumb {
-        background-color: #d493ff;   
+        background-color: #d493ff;
         border-radius: 25px;
     }
-    a{
+
+    a {
         text-decoration: none;
         color: black;
         border-bottom: 3px solid transparent;
     }
-    #headerNav a:hover{
+
+    #headerNav a:hover {
         border-bottom: 3px solid #5c3c92;
     }
-    #header{
+
+    #header {
         display: flex;
         flex: 1;
         flex-direction: column;
@@ -47,31 +57,36 @@
         text-align: center;
         background-image: url('./assets/background.jpeg');
         height: 80vh;
-        box-shadow:inset 0 0 0 2000px rgba(255, 255, 255, 0.3);
+        box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.3);
         background-size: cover;
         background-position: center center;
     }
-    #header #headerTitle #Title{
+
+    #header #headerTitle #Title {
         font-family: 'Calligraffitti', cursive;
         font-size: 500%;
         margin: 2% auto 0% auto;
     }
-    #header #headerTitle #SubTitle{
+
+    #header #headerTitle #SubTitle {
         font-family: 'Roboto', sans-serif;
-        font-size: 150%; 
+        font-size: 150%;
         margin: 0% auto 2% auto;
     }
-    #header #headerTitle #TitleBody{
+
+    #header #headerTitle #TitleBody {
         font-family: 'Montserrat', sans-serif;
         font-size: 125%;
         align-items: center;
         margin: 2% 5%;
         border-radius: 50px;
     }
-    .sticky + #header{
+
+    .sticky+#header {
         padding-top: 60px;
     }
-    #headerNav ul{
+
+    #headerNav ul {
         list-style: none;
         font-family: 'Roboto', sans-serif;
         display: flex;
@@ -82,69 +97,82 @@
         font-size: 120%;
         margin: 0% auto;
     }
-    #headerNav li{
+
+    #headerNav li {
         margin: 0% 1%;
     }
-    #contact #footerCopyright{
+
+    #contact #footerCopyright {
         display: flex;
         justify-content: center;
         color: gray;
     }
-    .buttonStyle{
+
+    .buttonStyle {
         font-family: 'Montserrat', sans-serif;
         background-color: #d493ff;
         padding: 1%;
         color: white;
         border-radius: 25px;
     }
-    .sectionHeader{
+
+    .sectionHeader {
         font-family: 'Montserrat', sans-serif;
         font-size: 250%;
         margin: 5% auto 0% auto;
         border-bottom: 3px solid #5c3c92;
     }
-    #contact #footerBody{
+
+    #contact #footerBody {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0% 15% 2% 15%; 
+        padding: 0% 15% 2% 15%;
     }
-    #about{
+
+    #about {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 2% 12% 0% 12%;
         text-align: center;
     }
-    #contact #footerBody #contactBody{
+
+    #contact #footerBody #contactBody {
         padding: 0 2%;
         text-align: center;
     }
-    #contact #footerCopyright{
+
+    #contact #footerCopyright {
         font-family: 'Montserrat', sans-serif;
     }
-    .section2Header{
+
+    .section2Header {
         font-family: 'Montserrat', sans-serif;
         font-size: 150%;
         margin: 2% auto 0% auto;
     }
-    #timeline{
+
+    #timeline {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    #timeline #sessions{
+
+    #timeline #sessions {
         border-radius: 12px;
         position: relative;
     }
-    #timeline li{
+
+    #timeline li {
         border-left: 1px solid #abaaed;
         position: relative;
         padding-left: 20px;
         margin-left: 10px;
         padding-bottom: 5px;
     }
-    #timeline li:before{
+
+    #timeline li:before {
         content: '';
         width: 15px;
         height: 15px;
@@ -156,50 +184,60 @@
         left: -10px;
         top: 0px;
     }
-    .courseClass{
+
+    .courseClass {
         background-color: #FF8BDB;
         color: white;
         padding: 1%;
     }
-    .workClass{
+
+    .workClass {
         background-color: #007062;
         color: white;
         padding: 1%;
     }
-    .workshopClass{
+
+    .workshopClass {
         background-color: #FFB183;
         color: white;
         padding: 1%;
     }
-    .hackathonClass{
+
+    .hackathonClass {
         background-color: #5c3c92;
         color: white;
         padding: 1%;
     }
-    #headerLogo{
+
+    #headerLogo {
         display: block;
     }
-    #project{
+
+    #project {
         display: flex;
         flex-direction: column;
         align-content: center;
         text-align: center;
     }
-    #skillsBody p{
+
+    #skillsBody p {
         display: flex;
         flex: 1;
         flex-direction: row;
         align-items: center;
         justify-content: center;
     }
-    #skillsBody p span{
+
+    #skillsBody p span {
         margin: 0 5%;
         cursor: pointer;
     }
+
     .tooltip {
         position: relative;
         display: inline-block;
     }
+
     .tooltip .tooltiptext {
         visibility: hidden;
         width: 120px;
@@ -213,23 +251,27 @@
         top: 100%;
         right: -75%;
     }
+
     .tooltip:hover .tooltiptext {
         visibility: visible;
     }
-    .the-blur{
+
+    .the-blur {
         position: fixed;
-        top:0;
+        top: 0;
         width: 100%;
         min-height: 50px;
         margin-bottom: 20px;
-        background: rgba(0,0,0,.4);
-        z-index:1010;
+        background: rgba(0, 0, 0, .4);
+        z-index: 1010;
         filter: blur(20px);
     }
-    #socialHandle{
+
+    #socialHandle {
         margin: -1% auto 1%;
     }
-    .featuredProjectcontainer{
+
+    .featuredProjectcontainer {
         display: flex;
         flex: 1;
         flex-direction: row;
@@ -237,100 +279,127 @@
         margin: 2% 15%;
         margin-bottom: 0;
     }
-    .featuredProjectcontainer .fpImage img{
+
+    .featuredProjectcontainer .fpImage img {
         width: 40vw;
         border-radius: 20px;
     }
-    .featuredProjectcontainer .fpImage{
+
+    .featuredProjectcontainer .fpImage {
         width: 30vw;
     }
-    .featuredProjectcontainer:nth-child(2) .fpImage{
+
+    .featuredProjectcontainer:nth-child(2) .fpImage {
         width: 25vw;
     }
-    .featuredProjectcontainer .fpBodyInner{
+
+    .featuredProjectcontainer .fpBodyInner {
         border-radius: 15px;
         padding: 1% 5%;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
         color: #fff;
     }
-    .featuredProjectcontainer #id1{
+
+    .featuredProjectcontainer #id1 {
         background-color: #5c3c92;
         text-align: start;
     }
-    .featuredProjectcontainer #id2{
+
+    .featuredProjectcontainer #id2 {
         background-color: #007062;
         text-align: start;
     }
-    .featuredProjectcontainer #id3{
+
+    .featuredProjectcontainer #id3 {
         background-color: #FFB183;
         text-align: start;
     }
-    .featuredProjectcontainer #id4{
+
+    .featuredProjectcontainer #id4 {
         background-color: #FF8BDB;
         text-align: start;
     }
-    .featuredProjectcontainer .fpBodyInner .fpbTech span{
+
+    .featuredProjectcontainer .fpBodyInner .fpbTech span {
         margin: 0 1%;
     }
-    .featuredProjectcontainer .fpBodyOutter{
+
+    .featuredProjectcontainer .fpBodyOutter {
         text-align: end;
     }
-    .featuredProjectcontainer .fpBodyOutter span{
+
+    .featuredProjectcontainer .fpBodyOutter span {
         margin: 0 1%;
     }
-    .featuredProjectcontainer .fpbTitle p{
+
+    .featuredProjectcontainer .fpbTitle p {
         font-family: 'Calligraffitti', cursive;
         font-size: 500%;
         font-size: 150%;
     }
-    #headerLogo img{
+
+    #headerLogo img {
         width: 100%;
     }
+
     @media only screen and (max-width: 600px) {
-        #headerNav ul{
+        #headerNav ul {
             font-size: 100%;
             margin: 0% 0% 0% -8%;
         }
-        #headerNav li{
+
+        #headerNav li {
             margin: 2% 1%;
         }
-        #skillsBody p span{
+
+        #skillsBody p span {
             margin: 0 1%;
         }
-        .featuredProjectcontainer{
+
+        .featuredProjectcontainer {
             flex-direction: column;
         }
-        .featuredProjectcontainer .fpImage{
+
+        .featuredProjectcontainer .fpImage {
             width: 50vw;
         }
-        .featuredProjectcontainer:nth-child(2) .fpImage{
+
+        .featuredProjectcontainer:nth-child(2) .fpImage {
             width: 50vw;
         }
-        .featuredProjectcontainer #id1{
+
+        .featuredProjectcontainer #id1 {
             text-align: center;
         }
-        .featuredProjectcontainer #id2{
+
+        .featuredProjectcontainer #id2 {
             text-align: center;
         }
-        .featuredProjectcontainer #id3{
+
+        .featuredProjectcontainer #id3 {
             text-align: center;
         }
-        .featuredProjectcontainer #id4{
+
+        .featuredProjectcontainer #id4 {
             text-align: center;
         }
-        .featuredProjectcontainer .fpImage img{
+
+        .featuredProjectcontainer .fpImage img {
             width: 50vw;
         }
     }
 </style>
+
 <body>
     <div id="headerNav">
         <ul id="list">
             <li><a href="">HOME</a></li>
             <li><a href="#project">PROJECT</a></li>
-            <li><div id="headerLogo">
-                <image src="./assets/favicon.png" />
-            </div></li>
+            <li>
+                <div id="headerLogo">
+                    <image src="./assets/favicon.png" />
+                </div>
+            </li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
@@ -339,7 +408,10 @@
         <div id="headerTitle">
             <p id="Title">Abhishek Joshi</p>
             <p id="SubTitle">Full Stack Developer</p>
-            <p id="TitleBody"><span style="color: white; font-size: 150%;">“</span>A creative and detailed individual with ability to develop effective and efficient solution with zero tolerance for errors. Looking to join a progressive tech company where my technical skills will be fully harnessed.<span style="color: white;font-size: 150%;">”</span></p>
+            <p id="TitleBody"><span style="color: white; font-size: 150%;">“</span>A creative and detailed individual
+                with ability to develop effective and efficient solution with zero tolerance for errors. Looking to join
+                a progressive tech company where my technical skills will be fully harnessed.<span
+                    style="color: white;font-size: 150%;">”</span></p>
         </div>
     </div>
     <div id="project">
@@ -355,15 +427,24 @@
                     </div>
                     <div class="fpBodyInner" id="id1">
                         <div class="fpbBody">
-                            <p>Happy Home is a home rental management system website where every user is authorized with passportjs. Every user can post there listing for sold or lease there home upto few number for unlimited listing they have buy vip account. Also vip user have more priority then common users listing in standing. Users can chat with each users and final the deal.</p>
+                            <p>Happy Home is a home rental management system website where every user is authorized with
+                                passportjs. Every user can post there listing for sold or lease there home upto few
+                                number for unlimited listing they have buy vip account. Also vip user have more priority
+                                then common users listing in standing. Users can chat with each users and final the
+                                deal.</p>
                         </div>
                         <div class="fpbTech">
-                            <p><span><img src="./assets/js.png"></span><span><img src="./assets/node.png"></span><span><img src="./assets/mon.png"></span></p>
+                            <p><span><img src="./assets/js.png"></span><span><img
+                                        src="./assets/node.png"></span><span><img src="./assets/mon.png"></span></p>
                         </div>
                     </div>
                     <div class="fpBodyOutter">
                         <div>
-                            <p><span><a href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_website-nodejs-mongodb-activity-6666888574996238336-EloF"><img src="./assets/linkedin.png"></a></span><span><a href="http://happyhomewebapp.herokuapp.com/"><img src="./assets/link.png"></a></span></p>
+                            <p><span><a
+                                        href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_website-nodejs-mongodb-activity-6666888574996238336-EloF"><img
+                                            src="./assets/linkedin.png"></a></span><span><a
+                                        href="http://happyhomewebapp.herokuapp.com/"><img
+                                            src="./assets/link.png"></a></span></p>
                         </div>
                     </div>
                 </div>
@@ -378,15 +459,25 @@
                     </div>
                     <div class="fpBodyInner" id="id2">
                         <div class="fpbBody">
-                            <p>Attendy is an hybrid app for evaluation based attendance system. In this app teacher can create class and student can join that class. Before lecture teacher can make quiz from app and set up time for the quiz. Student can access the quiz at up time and if they pass in the quiz then their attendance will be marked. Also location based attendance is only counted. Only student presented near teacher's location their attendance will be done.</p>
+                            <p>Attendy is an hybrid app for evaluation based attendance system. In this app teacher can
+                                create class and student can join that class. Before lecture teacher can make quiz from
+                                app and set up time for the quiz. Student can access the quiz at up time and if they
+                                pass in the quiz then their attendance will be marked. Also location based attendance is
+                                only counted. Only student presented near teacher's location their attendance will be
+                                done.</p>
                         </div>
                         <div class="fpbTech">
-                            <p><span><img src="./assets/js.png"></span><span><img src="./assets/rn.png"></span><span><img src="./assets/fire.png"></span></p>
+                            <p><span><img src="./assets/js.png"></span><span><img
+                                        src="./assets/rn.png"></span><span><img src="./assets/fire.png"></span></p>
                         </div>
                     </div>
                     <div class="fpBodyOutter">
                         <div>
-                            <p><span><a href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_reactnative-firebase-javascriptdeveloper-activity-6782490672877371392-Kj7J"><img src="./assets/linkedin.png"></a></span><span><a href="https://expo.io/artifacts/fd3ee327-67b8-40ca-b23d-aa714f00bb81"><img src="./assets/link.png"></a></span></p>
+                            <p><span><a
+                                        href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_reactnative-firebase-javascriptdeveloper-activity-6782490672877371392-Kj7J"><img
+                                            src="./assets/linkedin.png"></a></span><span><a
+                                        href="https://play.google.com/store/apps/details?id=com.abhijoshi41.Attendy"><img
+                                            src="./assets/link.png"></a></span></p>
                         </div>
                     </div>
                 </div>
@@ -401,15 +492,24 @@
                     </div>
                     <div class="fpBodyInner" id="id3">
                         <div class="fpbBody">
-                            <p>ProShop is an single page web app with MERN stack where users can buy specific company product and owner of the shop can sell. Owner of online store can make delievery check and payment check through their routes. Payment is secure with paypal with cart & history feature enable. Root user can make as many as owner of the store.</p>
+                            <p>ProShop is an single page web app with MERN stack where users can buy specific company
+                                product and owner of the shop can sell. Owner of online store can make delievery check
+                                and payment check through their routes. Payment is secure with paypal with cart &
+                                history feature enable. Root user can make as many as owner of the store.</p>
                         </div>
                         <div class="fpbTech">
-                            <p><span><img src="./assets/js.png"></span><span><img src="./assets/rjs.png"></span><span><img src="./assets/node.png"></span><span><img src="./assets/mon.png"></span></p>
+                            <p><span><img src="./assets/js.png"></span><span><img
+                                        src="./assets/rjs.png"></span><span><img
+                                        src="./assets/node.png"></span><span><img src="./assets/mon.png"></span></p>
                         </div>
                     </div>
                     <div class="fpBodyOutter">
                         <div>
-                            <p><span><a href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_mernstack-reactjs-nodejs-activity-6754992629601091584-PHDa"><img src="./assets/linkedin.png"></a></span><span><a href="http://eproshopwebapp.herokuapp.com/"><img src="./assets/link.png"></a></span></p>
+                            <p><span><a
+                                        href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_mernstack-reactjs-nodejs-activity-6754992629601091584-PHDa"><img
+                                            src="./assets/linkedin.png"></a></span><span><a
+                                        href="http://eproshopwebapp.herokuapp.com/"><img
+                                            src="./assets/link.png"></a></span></p>
                         </div>
                     </div>
                 </div>
@@ -424,15 +524,22 @@
                     </div>
                     <div class="fpBodyInner" id="id4">
                         <div class="fpbBody">
-                            <p>Socially is a social media website which include authentication by google followed by profile builder. Then make friends by sending request and accepting then. Also users can post on socially and other users can like or comment on that post.</p>
+                            <p>Socially is a social media website which include authentication by google followed by
+                                profile builder. Then make friends by sending request and accepting then. Also users can
+                                post on socially and other users can like or comment on that post.</p>
                         </div>
                         <div class="fpbTech">
-                            <p><span><img src="./assets/js.png"></span><span><img src="./assets/node.png"></span><span><img src="./assets/mon.png"></span></p>
+                            <p><span><img src="./assets/js.png"></span><span><img
+                                        src="./assets/node.png"></span><span><img src="./assets/mon.png"></span></p>
                         </div>
                     </div>
                     <div class="fpBodyOutter">
                         <div>
-                            <p><span><a href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_expressjs-mongoose-ejs-activity-6682632477414080512-yoM_"><img src="./assets/linkedin.png"></a></span><span><a href="http://sociallywebapp.herokuapp.com/"><img src="./assets/link.png"></a></span></p>
+                            <p><span><a
+                                        href="https://www.linkedin.com/posts/abhishek-joshi-132a5a182_expressjs-mongoose-ejs-activity-6682632477414080512-yoM_"><img
+                                            src="./assets/linkedin.png"></a></span><span><a
+                                        href="http://sociallywebapp.herokuapp.com/"><img
+                                            src="./assets/link.png"></a></span></p>
                         </div>
                     </div>
                 </div>
@@ -468,15 +575,23 @@
             </p>
         </div>
         <p class="section2Header">Background</p>
-        <p>I began my developer journey in first year of graduation  and have since worked on a number of solo and collaborative projects.I have completed three full stack web app and one hybrid app.Also done few of small project like static website, ML model, UI design and other system in java and python. I take pride in the work that I do and completing all my work before time. I am a firm believer in working hard, working together, and having fun along the way! Explore my portfolio, and feel free to get in touch with any questions.</p>
+        <p>I began my developer journey in first year of graduation and have since worked on a number of solo and
+            collaborative projects.I have completed three full stack web app and one hybrid app.Also done few of small
+            project like static website, ML model, UI design and other system in java and python. I take pride in the
+            work that I do and completing all my work before time. I am a firm believer in working hard, working
+            together, and having fun along the way! Explore my portfolio, and feel free to get in touch with any
+            questions.</p>
         <p class="section2Header">Extras</p>
-        <p><span style="border-bottom:2px solid #FF8BDB;">Course</span> · <span style="border-bottom:2px solid #007062;">Work</span> · <span style="border-bottom:2px solid #FFB183;">Workshop</span> · <span style="border-bottom:2px solid #5c3c92;">Hackathon</span></p>
+        <p><span style="border-bottom:2px solid #FF8BDB;">Course</span> · <span
+                style="border-bottom:2px solid #007062;">Work</span> · <span
+                style="border-bottom:2px solid #FFB183;">Workshop</span> · <span
+                style="border-bottom:2px solid #5c3c92;">Hackathon</span></p>
     </div>
     <div id="timeline">
         <ul id="sessions">
             <li>
-              <p class="time">2018</p>
-              <p class="courseClass">C++ & Java Programming (Udemy)</p>
+                <p class="time">2018</p>
+                <p class="courseClass">C++ & Java Programming (Udemy)</p>
             </li>
             <li>
                 <p class="time">2019</p>
@@ -500,12 +615,18 @@
                 <p class="courseClass">React Native Development (Udemy)</p>
             </li>
         </ul>
-    </div> 
+    </div>
     <div id="contact">
         <div id="footerBody">
             <p class="sectionHeader">CONTACT</p>
-            <p id="contactBody">Interested in learning more about me, my work or how we can collaborate on an upcoming project? Feel free to reach out anytime, I would be more than happy to chat.</p>
-            <p id="socialHandle"><span><a href="https://www.instagram.com/abhishek.__.93/"><img src="./assets/instagram.png"></a></span><span><a href="https://github.com/AbhishekJoshi93"><img src="./assets/github.png"></a></span><span><a href="https://www.linkedin.com/in/abhishek-joshi-132a5a182/"><img src="./assets/linkedin.png"></a></span><span><a href="./assets/Abhishek(Resume).pdf"><img src="./assets/resumes.png"></a></span></p>
+            <p id="contactBody">Interested in learning more about me, my work or how we can collaborate on an upcoming
+                project? Feel free to reach out anytime, I would be more than happy to chat.</p>
+            <p id="socialHandle"><span><a href="https://www.instagram.com/abhishek.__.93/"><img
+                            src="./assets/instagram.png"></a></span><span><a
+                        href="https://github.com/AbhishekJoshi93"><img src="./assets/github.png"></a></span><span><a
+                        href="https://www.linkedin.com/in/abhishek-joshi-132a5a182/"><img
+                            src="./assets/linkedin.png"></a></span><span><a
+                        href="./assets/18IT041_ABHISHEK_JOSHI.pdf"><img src="./assets/resumes.png"></a></span></p>
             <p class="buttonStyle"><a href="mailto:joshiabhishek932000.com">Say Hello 👋</a></p>
         </div>
         <div id="footerCopyright">
@@ -513,4 +634,5 @@
         </div>
     </div>
 </body>
+
 </html>
